@@ -8,6 +8,11 @@
 
     <title>Pricing Calculator | Small Business Tools</title>
 
+    <meta
+        name="description"
+        content="Free pricing calculator for small businesses."
+    >
+
     <style>
 
         * {
@@ -32,6 +37,7 @@
             margin: auto;
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         header a {
@@ -84,6 +90,7 @@
             border-radius: 8px;
             font-size: 17px;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .answer {
@@ -103,38 +110,56 @@
             font-size: 34px;
         }
 
+        .explanation {
+            line-height: 1.6;
+            color: #475569;
+        }
+
     </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
     <div class="header-inner">
 
-        <strong>Small Business Tools</strong>
+        <strong>
+            Small Business Tools
+        </strong>
 
-        <a href="index.html">← Home</a>
+        <a href="index.html">
+            ← Home
+        </a>
 
     </div>
 
 </header>
 
+
 <main>
+
 
     <div class="card">
 
-        <h1>Pricing Calculator</h1>
+        <h1>
+            Pricing Calculator
+        </h1>
 
-        <p>
-            Calculate a recommended price based on your costs,
-            time, desired pay, and profit margin.
+        <p class="explanation">
+            Calculate a recommended price based on your job expenses,
+            labor, desired hourly pay, and target profit margin.
         </p>
+
 
         <div class="input-group">
 
-            <label>Job Expenses ($)</label>
+            <label for="expenses">
+                Job Expenses ($)
+            </label>
 
             <input
                 id="expenses"
@@ -144,9 +169,12 @@
 
         </div>
 
+
         <div class="input-group">
 
-            <label>Hours Worked</label>
+            <label for="hours">
+                Hours Worked
+            </label>
 
             <input
                 id="hours"
@@ -156,9 +184,12 @@
 
         </div>
 
+
         <div class="input-group">
 
-            <label>Desired Pay Per Hour ($)</label>
+            <label for="hourly">
+                Desired Pay Per Hour ($)
+            </label>
 
             <input
                 id="hourly"
@@ -168,9 +199,12 @@
 
         </div>
 
+
         <div class="input-group">
 
-            <label>Desired Profit Margin (%)</label>
+            <label for="margin">
+                Desired Profit Margin (%)
+            </label>
 
             <input
                 id="margin"
@@ -180,50 +214,68 @@
 
         </div>
 
+
         <button onclick="calculatePrice()">
             Calculate Recommended Price
         </button>
 
     </div>
 
+
     <div class="card">
 
         <div class="answer">
 
-            <span>Recommended Price</span>
+            <span>
+                Recommended Price
+            </span>
 
-            <strong id="price">$0.00</strong>
+            <strong id="price">
+                $0.00
+            </strong>
 
         </div>
 
     </div>
 
+
 </main>
+
 
 <script>
 
 function calculatePrice() {
 
+
     const expenses =
         Number(document.getElementById("expenses").value) || 0;
+
 
     const hours =
         Number(document.getElementById("hours").value) || 0;
 
+
     const hourly =
         Number(document.getElementById("hourly").value) || 0;
+
 
     const margin =
         Number(document.getElementById("margin").value) || 0;
 
-    const labor = hours * hourly;
 
-    const baseCost = expenses + labor;
+    const labor =
+        hours * hourly;
+
+
+    const baseCost =
+        expenses + labor;
+
 
     const recommended =
-        margin < 100
-        ? baseCost / (1 - margin / 100)
-        : 0;
+        margin >= 100
+        ? 0
+        : baseCost / (1 - margin / 100);
+
 
     document.getElementById("price").textContent =
         "$" + recommended.toFixed(2);
@@ -231,6 +283,7 @@ function calculatePrice() {
 }
 
 </script>
+
 
 </body>
 
