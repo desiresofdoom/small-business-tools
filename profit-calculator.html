@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Job Profit Calculator | Small Business Tools</title>
 
+    <meta
+        name="description"
+        content="Free job profit calculator for small business owners."
+    >
+
     <style>
+
         * {
             box-sizing: border-box;
         }
 
         body {
-            <header>
-    <div style="max-width:900px;margin:auto;display:flex;justify-content:space-between;align-items:center;">
-        <strong>Small Business Tools</strong>
-
-        <a href="index.html" style="color:white;text-decoration:none;">
-            ← Home
-        </a>
-    </div>
-</header>
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f4f6f8;
@@ -29,18 +29,20 @@
         header {
             background: #111827;
             color: white;
-            padding: 22px 18px;
-            text-align: center;
+            padding: 20px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 28px;
+        .header-inner {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        header p {
-            margin: 8px 0 0;
-            color: #cbd5e1;
+        header a {
+            color: white;
+            text-decoration: none;
         }
 
         main {
@@ -57,6 +59,7 @@
             box-shadow: 0 4px 18px rgba(0,0,0,0.07);
         }
 
+        .card h1,
         .card h2 {
             margin-top: 0;
         }
@@ -91,10 +94,6 @@
             cursor: pointer;
         }
 
-        button:hover {
-            background: #1d4ed8;
-        }
-
         .results {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -123,136 +122,287 @@
         }
 
         @media (max-width: 600px) {
+
             .results {
                 grid-template-columns: 1fr;
             }
 
-            header h1 {
-                font-size: 24px;
-            }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
 <header>
-    <h1>Job Profit Calculator</h1>
-    <p>Know exactly how profitable your next job will be.</p>
+
+    <div class="header-inner">
+
+        <strong>
+            Small Business Tools
+        </strong>
+
+        <a href="index.html">
+            ← Home
+        </a>
+
+    </div>
+
 </header>
+
 
 <main>
 
+
     <div class="card">
-        <h2>Enter Job Information</h2>
+
+        <h1>
+            Job Profit Calculator
+        </h1>
+
+        <p>
+            Enter your job information to see how much profit
+            you actually make.
+        </p>
+
 
         <div class="input-group">
-            <label for="revenue">Customer Price ($)</label>
-            <input id="revenue" type="number" placeholder="750">
+
+            <label for="revenue">
+                Customer Price ($)
+            </label>
+
+            <input
+                id="revenue"
+                type="number"
+                placeholder="750"
+            >
+
         </div>
+
 
         <div class="input-group">
-            <label for="materials">Materials ($)</label>
-            <input id="materials" type="number" placeholder="120">
+
+            <label for="materials">
+                Materials ($)
+            </label>
+
+            <input
+                id="materials"
+                type="number"
+                placeholder="120"
+            >
+
         </div>
+
 
         <div class="input-group">
-            <label for="travel">Travel / Gas ($)</label>
-            <input id="travel" type="number" placeholder="40">
+
+            <label for="travel">
+                Travel / Gas ($)
+            </label>
+
+            <input
+                id="travel"
+                type="number"
+                placeholder="40"
+            >
+
         </div>
+
 
         <div class="input-group">
-            <label for="other">Other Expenses ($)</label>
-            <input id="other" type="number" placeholder="50">
+
+            <label for="other">
+                Other Expenses ($)
+            </label>
+
+            <input
+                id="other"
+                type="number"
+                placeholder="50"
+            >
+
         </div>
+
 
         <div class="input-group">
-            <label for="hours">Hours Worked</label>
-            <input id="hours" type="number" placeholder="6">
+
+            <label for="hours">
+                Hours Worked
+            </label>
+
+            <input
+                id="hours"
+                type="number"
+                placeholder="6"
+            >
+
         </div>
 
-        <button onclick="calculateProfit()">Calculate Profit</button>
+
+        <button onclick="calculateProfit()">
+            Calculate Profit
+        </button>
+
     </div>
 
+
     <div class="card">
-        <h2>Your Results</h2>
+
+        <h2>
+            Your Results
+        </h2>
+
 
         <div class="results">
 
-            <div class="result">
-                <span>Revenue</span>
-                <strong id="resultRevenue">$0.00</strong>
-            </div>
 
             <div class="result">
-                <span>Total Expenses</span>
-                <strong id="resultExpenses">$0.00</strong>
+
+                <span>
+                    Revenue
+                </span>
+
+                <strong id="resultRevenue">
+                    $0.00
+                </strong>
+
             </div>
+
+
+            <div class="result">
+
+                <span>
+                    Total Expenses
+                </span>
+
+                <strong id="resultExpenses">
+                    $0.00
+                </strong>
+
+            </div>
+
 
             <div class="result profit">
-                <span>Net Profit</span>
-                <strong id="resultProfit">$0.00</strong>
+
+                <span>
+                    Net Profit
+                </span>
+
+                <strong id="resultProfit">
+                    $0.00
+                </strong>
+
             </div>
 
-            <div class="result">
-                <span>Profit Margin</span>
-                <strong id="resultMargin">0%</strong>
-            </div>
 
             <div class="result">
-                <span>Profit Per Hour</span>
-                <strong id="resultHourly">$0.00</strong>
+
+                <span>
+                    Profit Margin
+                </span>
+
+                <strong id="resultMargin">
+                    0%
+                </strong>
+
             </div>
+
+
+            <div class="result">
+
+                <span>
+                    Profit Per Hour
+                </span>
+
+                <strong id="resultHourly">
+                    $0.00
+                </strong>
+
+            </div>
+
 
         </div>
+
     </div>
+
 
 </main>
 
+
 <script>
-    function calculateProfit() {
 
-        const revenue =
-            Number(document.getElementById("revenue").value) || 0;
+function calculateProfit() {
 
-        const materials =
-            Number(document.getElementById("materials").value) || 0;
 
-        const travel =
-            Number(document.getElementById("travel").value) || 0;
+    const revenue =
+        Number(document.getElementById("revenue").value) || 0;
 
-        const other =
-            Number(document.getElementById("other").value) || 0;
 
-        const hours =
-            Number(document.getElementById("hours").value) || 0;
+    const materials =
+        Number(document.getElementById("materials").value) || 0;
 
-        const expenses = materials + travel + other;
 
-        const profit = revenue - expenses;
+    const travel =
+        Number(document.getElementById("travel").value) || 0;
 
-        const margin =
-            revenue > 0 ? (profit / revenue) * 100 : 0;
 
-        const hourly =
-            hours > 0 ? profit / hours : 0;
+    const other =
+        Number(document.getElementById("other").value) || 0;
 
-        document.getElementById("resultRevenue").textContent =
-            "$" + revenue.toFixed(2);
 
-        document.getElementById("resultExpenses").textContent =
-            "$" + expenses.toFixed(2);
+    const hours =
+        Number(document.getElementById("hours").value) || 0;
 
-        document.getElementById("resultProfit").textContent =
-            "$" + profit.toFixed(2);
 
-        document.getElementById("resultMargin").textContent =
-            margin.toFixed(1) + "%";
+    const expenses =
+        materials + travel + other;
 
-        document.getElementById("resultHourly").textContent =
-            "$" + hourly.toFixed(2);
-    }
+
+    const profit =
+        revenue - expenses;
+
+
+    const margin =
+        revenue > 0
+        ? (profit / revenue) * 100
+        : 0;
+
+
+    const hourly =
+        hours > 0
+        ? profit / hours
+        : 0;
+
+
+    document.getElementById("resultRevenue").textContent =
+        "$" + revenue.toFixed(2);
+
+
+    document.getElementById("resultExpenses").textContent =
+        "$" + expenses.toFixed(2);
+
+
+    document.getElementById("resultProfit").textContent =
+        "$" + profit.toFixed(2);
+
+
+    document.getElementById("resultMargin").textContent =
+        margin.toFixed(1) + "%";
+
+
+    document.getElementById("resultHourly").textContent =
+        "$" + hourly.toFixed(2);
+
+}
+
 </script>
 
+
 </body>
+
 </html>
