@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Small Business Tools | Free Business Calculators</title>
+
+    <meta
+        name="description"
+        content="Free calculators and tools for small business owners. Calculate job profit, pricing, hourly rates, and more."
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #111827;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 24px 18px;
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #dbeafe;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 70px 18px 50px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin: 0 auto 18px;
+            max-width: 800px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #64748b;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .tools {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 18px 70px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .tool {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.15s;
+        }
+
+        .tool:hover {
+            transform: translateY(-3px);
+        }
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .tool h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+
+        .tool p {
+            color: #64748b;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .free {
+            display: inline-block;
+            margin-top: 18px;
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .premium {
+            max-width: 1000px;
+            margin: 0 auto 70px;
+            padding: 45px 25px;
+            background: #111827;
+            color: white;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .premium h2 {
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        .premium p {
+            color: #cbd5e1;
+            max-width: 650px;
+            margin: 0 auto 25px;
+            line-height: 1.6;
+        }
+
+        .premium-button {
+            display: inline-block;
+            background: white;
+            color: #111827;
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 18px;
+            color: #64748b;
+        }
+
+        @media (max-width: 800px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">Small Business Tools</div>
+
+        <nav>
+            <a href="#tools">Tools</a>
+            <a href="#premium">Premium</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+
+    <h1>Free Tools That Help Small Businesses Make Smarter Decisions</h1>
+
+    <p>
+        Calculate your profit, pricing, hourly rate, and more with
+        simple tools built for small business owners.
+    </p>
+
+</section>
+
+<section class="tools" id="tools">
+
+    <h2 class="section-title">Free Business Tools</h2>
+
+    <div class="grid">
+
+        <a class="tool" href="profit-calculator.html">
+
+            <div class="icon">💰</div>
+
+            <h3>Job Profit Calculator</h3>
+
+            <p>
+                See exactly how much money you make from a job
+                after expenses.
+            </p>
+
+            <span class="free">Use Free →</span>
+
+        </a>
+
+        <div class="tool">
+
+            <div class="icon">🏷️</div>
+
+            <h3>Pricing Calculator</h3>
+
+            <p>
+                Calculate what you should charge based on your
+                costs and desired profit.
+            </p>
+
+            <span class="free">Coming Soon</span>
+
+        </div>
+
+        <div class="tool">
+
+            <div class="icon">⏱️</div>
+
+            <h3>Hourly Rate Calculator</h3>
+
+            <p>
+                Find the hourly rate you need to reach your income
+                goals.
+            </p>
+
+            <span class="free">Coming Soon</span>
+
+        </div>
+
+        <div class="tool">
+
+            <div class="icon">📈</div>
+
+            <h3>Break-Even Calculator</h3>
+
+            <p>
+                Find out how many jobs you need to complete before
+                you start making profit.
+            </p>
+
+            <span class="free">Coming Soon</span>
+
+        </div>
+
+        <div class="tool">
+
+            <div class="icon">📊</div>
+
+            <h3>Revenue Calculator</h3>
+
+            <p>
+                Estimate your monthly and yearly business revenue.
+            </p>
+
+            <span class="free">Coming Soon</span>
+
+        </div>
+
+        <div class="tool">
+
+            <div class="icon">🧾</div>
+
+            <h3>Quote Calculator</h3>
+
+            <p>
+                Quickly estimate what to charge a potential customer.
+            </p>
+
+            <span class="free">Coming Soon</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="premium" id="premium">
+
+    <h2>Build Your Business Toolkit</h2>
+
+    <p>
+        We're creating a complete collection of calculators,
+        templates, spreadsheets, and resources designed to help
+        small businesses run more efficiently.
+    </p>
+
+    <a class="premium-button" href="#">
+        Premium Toolkit — Coming Soon
+    </a>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Small Business Tools</p>
+
+</footer>
+
+</body>
+</html>
